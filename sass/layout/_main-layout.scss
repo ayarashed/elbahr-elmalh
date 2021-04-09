@@ -1,0 +1,236 @@
+@import '../component/button';
+div{
+    direction: $dir;
+}
+@font-face {
+    font-family: "cairo";
+    src: url("../../fonts/cairo/Cairo-Regular.ttf"),
+         url("../../fonts/cairo/Cairo-Regular.woff"),
+         url("../../fonts/cairo/Cairo-Regular.woff2"),
+         url("../../fonts/cairo/Cairo-Regular.eot")
+        ;
+}
+header{
+    .upper-nav{
+        background-color: $primary_color;
+        font-size: 13px;
+        
+        .header__upper-nav__contact{
+            padding:12px 0px 8px 0px;
+            padding-#{$start-dir}: 35px;
+            .row{
+                > div{
+                    float: $start-dir;
+                    width: 20%;
+                    a{
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                    .email{
+                        margin-#{$end-dir}: 0px;
+                        
+                    }
+                }
+            }
+            
+        }
+        .header__upper-nav__socialmedia{
+            padding:10px 0px 10px 0px;
+            a{
+                border: 1px solid $secondary_color;
+                border-radius: 50%;
+                font-size: 12px;
+                margin-#{$end-dir}: 3px;
+                &:first-child{   
+                    padding:4.3px 9.3px 3.8px 7.3px;
+                }
+                &:nth-child(2){   
+                    padding: 4.8px 6.3px 3.9px 6.3px;
+                }
+                &:nth-child(3){   
+                    padding: 1.3px 5.3px 3.3px 6.3px;
+                    font-size: 15.4px;
+                }
+                &:last-child{
+                    padding: 4.2px 6.3px 4.2px 6.3px
+                }
+            }
+        }
+        a{
+            color:$secondary_color;
+            &:hover{
+                text-decoration: none;
+            }
+            
+        }
+    }
+    .header__navbar{
+        font-family: cairo;
+        ul{
+            li{
+                margin-#{$end-dir}: 52px;
+                .active{
+                    color: $primary_color!important;
+                }
+                a{
+                    color: #1d1818!important;
+                    &:hover{
+                        color: $primary_color!important;
+                        &:first-child{
+                            color: $third_color;
+                        }
+                    }
+                    @media (min-width: 1441px) and (max-width : 2560px){
+                        font-size: 20px
+                    }
+                }
+                @media only screen and (min-width : 769px) and (max-width : 1024px) {
+                    margin-#{$end-dir}: 20px;
+                }
+                @media (min-width: 1441px) and (max-width : 2560px){
+                    margin-#{$end-dir}: 140px;
+                }
+            }
+        }
+        .navbar-light .navbar-toggler {
+            border: none!important;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none!important;
+        }
+        .navbar-light .navbar-toggler-icon{
+            background-image: url(../../../images/svg/sliders-h-solid.svg)!important;
+        }
+    }
+    .header__slide{
+        .item{
+            /*background-image: url(../../images/backgrounds/seafood-3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;*/
+            height:583px;
+            position: relative;
+            @media only screen and (min-width : 320px) and (max-width : 480px) {
+                height: 410px;
+            }
+            img{
+                height: inherit;
+            }
+            .header__slide__item{
+                width: 100%;
+                background-color:  rgba(0, 0, 0, 0.78);
+                position: absolute;
+                top: 0;
+                $start-dir:0;
+                z-index: 99999;
+                display: table;
+                .header__slide__item__content{
+                    color: $secondary_color;
+                    text-align: center;
+                    margin: auto;
+                    padding-top: 147px;
+                    //padding-bottom: 230px;
+                    height: 700px;
+                    h1{
+                        margin-bottom: 7px;
+                        padding-bottom: 27px;
+                        font-size: 57px;
+                        font-weight: bold;
+                        color: $primary_color;
+                        @media only screen and (min-width : 769px) and (max-width : 1024px) {
+                            font-size: 50px;
+                        }
+                        @media only screen and (min-width : 481px) and (max-width : 768px) {
+                            font-size: 45px;
+                        }
+                        @media only screen and (min-width : 320px) and (max-width : 480px) {
+                            font-size: 25px;
+                        }
+                    }
+                    p{
+                        color: #ffffff;
+                        opacity: 0.71;
+                        line-height: 1.63;
+                        padding: 0px 391px;
+                        @media only screen and (min-width : 769px) and (max-width : 1024px) {
+                            font-size: 17px;
+                            padding: 0px 209px;
+                        }
+                        @media only screen and (min-width : 481px) and (max-width : 768px) {
+                            font-size: 14px;
+                            padding: 0 60px;
+                        }
+                        @media only screen and (min-width : 320px) and (max-width : 480px) {
+                            font-size: 14px;
+                            padding: 0px 60px;
+                        }
+                    }
+                    button{
+                        @extend %button;
+                        padding: 14px 48px;
+                        &:hover{
+                            background-color:  rgba(0, 0, 0, 0.0)!important;
+                            color: $secondary_color;
+                        }
+                        @media only screen and (min-width : 481px) and (max-width : 768px){
+                            padding: 11px 23px;
+                        }
+                        @media only screen and (min-width : 320px) and (max-width : 480px){
+                            padding: 8px 15px;
+                            font-weight: 500;
+                            letter-spacing: 0px;
+                        }     
+                    }
+                    @media (min-width: 1441px) and (max-width : 2560px){
+                        //padding-bottom: 240px;
+                    }
+                    @media only screen and (min-width : 769px) and (max-width : 1024px) {
+                        //padding-bottom: 235px;
+                    }
+                    @media only screen and (min-width : 481px) and (max-width : 768px){
+                        //padding-bottom:240px
+                    }
+                    @media only screen and (min-width : 320px) and (max-width : 480px){
+                        //padding-bottom: 140px;
+                        padding-top: 85px;
+                    }
+
+                }
+
+            }
+        }
+        .owl-carousel {
+            .nav-btn{
+                position: absolute;
+                cursor: pointer;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0px 10px;
+                font-size: 20px;
+                color: $primary_color;
+                border: 3px solid $primary_color;
+                border-radius: 50%;
+                @media only screen and (max-width : 768px){
+                    display: none;
+                }
+            }
+            .owl-prev.disabled,.owl-next.disabled{
+                pointer-events: none;
+                opacity: 0.2;
+            }
+            .prev-slide{
+                left: 55px;
+            }
+            .next-slide{
+                right: 55px;
+            }
+            .prev-slide:hover{
+                background-position: 0px -53px;
+            }
+            .next-slide:hover{
+                background-position: -24px -53px;
+            }
+        }
+    }
+}
